@@ -7,4 +7,7 @@ target 'PhotoSNS' do
 
   # Pods for PhotoSNS
   pod 'ESTabBarController'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end
