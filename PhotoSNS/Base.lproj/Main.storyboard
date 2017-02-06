@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -35,7 +35,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FL2-1H-seB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FKg-xO-HRD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -52,10 +52,84 @@
                         <viewControllerLayoutGuide type="bottom" id="nf8-4I-xvM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rEG-X4-hPa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FpQ-Sn-17e">
+                                <rect key="frame" x="10" y="100" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7pr-ES-SMh"/>
+                                    <constraint firstAttribute="height" constant="30" id="BKt-40-0nl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-0a-dbs">
+                                <rect key="frame" x="10" y="140" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="keQ-uP-Jqi"/>
+                                    <constraint firstAttribute="height" constant="30" id="oNx-F8-gnR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display name when new account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtL-e8-Ecg">
+                                <rect key="frame" x="10" y="180" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1TA-ne-iPy"/>
+                                    <constraint firstAttribute="height" constant="30" id="60L-Yp-bkp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m43-g4-ZIR">
+                                <rect key="frame" x="10" y="220" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EIH-Dw-BRk"/>
+                                    <constraint firstAttribute="width" constant="300" id="h9w-QQ-E3b"/>
+                                </constraints>
+                                <state key="normal" title="Login" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLoginButton:" destination="QXB-a4-SaB" eventType="touchUpInside" id="Kd0-Wz-f6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3U4-b7-QIJ">
+                                <rect key="frame" x="10" y="260" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Vn-mC-vlG"/>
+                                    <constraint firstAttribute="width" constant="300" id="AWB-2h-gCk"/>
+                                </constraints>
+                                <state key="normal" title="Create new account" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCreateAccountButton:" destination="QXB-a4-SaB" eventType="touchUpInside" id="UI2-3K-DCu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JDp-0a-dbs" firstAttribute="centerX" secondItem="rEG-X4-hPa" secondAttribute="centerX" id="1S7-JC-446"/>
+                            <constraint firstItem="FpQ-Sn-17e" firstAttribute="top" secondItem="hcC-9h-4oN" secondAttribute="bottom" constant="80" id="CEM-he-It4"/>
+                            <constraint firstItem="3U4-b7-QIJ" firstAttribute="centerX" secondItem="FpQ-Sn-17e" secondAttribute="centerX" id="IQK-mt-s0L"/>
+                            <constraint firstItem="m43-g4-ZIR" firstAttribute="centerX" secondItem="FpQ-Sn-17e" secondAttribute="centerX" id="KdW-d4-kVU"/>
+                            <constraint firstItem="BtL-e8-Ecg" firstAttribute="centerX" secondItem="FpQ-Sn-17e" secondAttribute="centerX" id="Kvu-gx-N8i"/>
+                            <constraint firstItem="m43-g4-ZIR" firstAttribute="top" secondItem="BtL-e8-Ecg" secondAttribute="bottom" constant="10" id="MrV-mK-Qan"/>
+                            <constraint firstItem="BtL-e8-Ecg" firstAttribute="top" secondItem="JDp-0a-dbs" secondAttribute="bottom" constant="10" id="PUk-kd-NNR"/>
+                            <constraint firstItem="FpQ-Sn-17e" firstAttribute="centerX" secondItem="rEG-X4-hPa" secondAttribute="centerX" id="QnB-VZ-aCf"/>
+                            <constraint firstItem="BtL-e8-Ecg" firstAttribute="centerX" secondItem="rEG-X4-hPa" secondAttribute="centerX" id="WcA-UD-PSR"/>
+                            <constraint firstItem="JDp-0a-dbs" firstAttribute="top" secondItem="FpQ-Sn-17e" secondAttribute="bottom" constant="10" id="dR4-eX-AjX"/>
+                            <constraint firstItem="3U4-b7-QIJ" firstAttribute="top" secondItem="m43-g4-ZIR" secondAttribute="bottom" constant="10" id="tu8-Jc-Yvc"/>
+                            <constraint firstItem="JDp-0a-dbs" firstAttribute="centerX" secondItem="FpQ-Sn-17e" secondAttribute="centerX" id="vkC-mz-A87"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="BtL-e8-Ecg" id="AS4-iz-SVN"/>
+                        <outlet property="emailTextField" destination="FpQ-Sn-17e" id="HXc-8p-bEO"/>
+
+                        <outlet property="passwordTextField" destination="JDp-0a-dbs" id="VDr-aI-AbU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6t-V8-kPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eVs-a2-3jY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dIW-bI-pH8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -87,7 +161,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eUI-rx-doP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bfO-p9-Aib">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -104,7 +178,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MwN-Wa-SYK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CNR-Lc-hgu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -113,4 +187,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn" width="300" height="40"/>
+    </resources>
 </document>

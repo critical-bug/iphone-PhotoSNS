@@ -8,6 +8,7 @@
 
 import UIKit
 import ESTabBarController
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -49,5 +50,14 @@ class ViewController: UIViewController {
 		}, at: 1)
 	}
 
+	override func viewDidAppear(_ animated: Bool) {
+		if FIRAuth.auth()?.currentUser == nil {
+			DispatchQueue.main.async {
+				let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+				self.present(loginViewController!, animated: true, completion: nil)
+			}
+		}
+		super.viewDidAppear(animated)
+	}
 }
 
