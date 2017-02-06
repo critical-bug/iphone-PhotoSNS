@@ -1,0 +1,4 @@
+AdobeCreativeSDK*
+Pods/*
+*.xcworkspace
+GoogleService-Info.plist

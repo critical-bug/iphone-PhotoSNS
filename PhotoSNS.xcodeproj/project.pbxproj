@@ -12,6 +12,11 @@
 		9524998D1E4827E9006353C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9524998B1E4827E9006353C0 /* Main.storyboard */; };
 		9524998F1E4827E9006353C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9524998E1E4827E9006353C0 /* Assets.xcassets */; };
 		952499921E4827E9006353C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952499901E4827E9006353C0 /* LaunchScreen.storyboard */; };
+		9524999A1E482AC5006353C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952499991E482AC5006353C0 /* HomeViewController.swift */; };
+		9524999C1E482ADF006353C0 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524999B1E482ADF006353C0 /* ImageSelectViewController.swift */; };
+		9524999E1E482AEC006353C0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524999D1E482AEC006353C0 /* PostViewController.swift */; };
+		952499A01E482AF9006353C0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524999F1E482AF9006353C0 /* SettingViewController.swift */; };
+		952499A41E485F2C006353C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952499A31E485F2C006353C0 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		9524998E1E4827E9006353C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		952499911E4827E9006353C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		952499931E4827E9006353C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952499991E482AC5006353C0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9524999B1E482ADF006353C0 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
+		9524999D1E482AEC006353C0 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		9524999F1E482AF9006353C0 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		952499A31E485F2C006353C0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				9524998E1E4827E9006353C0 /* Assets.xcassets */,
 				952499901E4827E9006353C0 /* LaunchScreen.storyboard */,
 				952499931E4827E9006353C0 /* Info.plist */,
+				952499991E482AC5006353C0 /* HomeViewController.swift */,
+				9524999B1E482ADF006353C0 /* ImageSelectViewController.swift */,
+				9524999D1E482AEC006353C0 /* PostViewController.swift */,
+				9524999F1E482AF9006353C0 /* SettingViewController.swift */,
+				952499A31E485F2C006353C0 /* LoginViewController.swift */,
 			);
 			path = PhotoSNS;
 			sourceTree = "<group>";
@@ -96,6 +111,7 @@
 				TargetAttributes = {
 					952499831E4827E8006353C0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6VUM75Z68A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9524999C1E482ADF006353C0 /* ImageSelectViewController.swift in Sources */,
 				9524998A1E4827E9006353C0 /* ViewController.swift in Sources */,
 				952499881E4827E9006353C0 /* AppDelegate.swift in Sources */,
+				9524999A1E482AC5006353C0 /* HomeViewController.swift in Sources */,
+				9524999E1E482AEC006353C0 /* PostViewController.swift in Sources */,
+				952499A01E482AF9006353C0 /* SettingViewController.swift in Sources */,
+				952499A41E485F2C006353C0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +279,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6VUM75Z68A;
 				INFOPLIST_FILE = PhotoSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.techacademy.critical-bug.PhotoSNS";
@@ -270,6 +293,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6VUM75Z68A;
 				INFOPLIST_FILE = PhotoSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.techacademy.critical-bug.PhotoSNS";
@@ -297,6 +322,7 @@
 				952499981E4827E9006353C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
