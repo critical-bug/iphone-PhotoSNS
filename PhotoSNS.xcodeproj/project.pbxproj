@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2A2E894B3C8ACC9C507432 /* Pods_PhotoSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4140FB384EC2C9CBDCB5C155 /* Pods_PhotoSNS.framework */; };
 		952499881E4827E9006353C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952499871E4827E9006353C0 /* AppDelegate.swift */; };
 		9524998A1E4827E9006353C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952499891E4827E9006353C0 /* ViewController.swift */; };
 		9524998D1E4827E9006353C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9524998B1E4827E9006353C0 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172559E899AF6DE8BFDBD366 /* Pods-PhotoSNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSNS/Pods-PhotoSNS.release.xcconfig"; sourceTree = "<group>"; };
+		35AEEF072333330C17486D08 /* Pods-PhotoSNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSNS/Pods-PhotoSNS.debug.xcconfig"; sourceTree = "<group>"; };
+		4140FB384EC2C9CBDCB5C155 /* Pods_PhotoSNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoSNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952499841E4827E9006353C0 /* PhotoSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952499871E4827E9006353C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952499891E4827E9006353C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2A2E894B3C8ACC9C507432 /* Pods_PhotoSNS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CF0D01504943CAD3FCA7117 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35AEEF072333330C17486D08 /* Pods-PhotoSNS.debug.xcconfig */,
+				172559E899AF6DE8BFDBD366 /* Pods-PhotoSNS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9524997B1E4827E8006353C0 = {
 			isa = PBXGroup;
 			children = (
 				952499861E4827E9006353C0 /* PhotoSNS */,
 				952499851E4827E9006353C0 /* Products */,
+				3CF0D01504943CAD3FCA7117 /* Pods */,
+				AD7922E3A034092F82565A2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			path = PhotoSNS;
 			sourceTree = "<group>";
 		};
+		AD7922E3A034092F82565A2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4140FB384EC2C9CBDCB5C155 /* Pods_PhotoSNS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 952499961E4827E9006353C0 /* Build configuration list for PBXNativeTarget "PhotoSNS" */;
 			buildPhases = (
+				790AE82C21409F74AC3E76AD /* [CP] Check Pods Manifest.lock */,
 				952499801E4827E8006353C0 /* Sources */,
 				952499811E4827E8006353C0 /* Frameworks */,
 				952499821E4827E8006353C0 /* Resources */,
+				CFCDFD6974F49493F8CDE127 /* [CP] Embed Pods Frameworks */,
+				A017E9521C874B90BBF499C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		790AE82C21409F74AC3E76AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A017E9521C874B90BBF499C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSNS/Pods-PhotoSNS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFCDFD6974F49493F8CDE127 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSNS/Pods-PhotoSNS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		952499801E4827E8006353C0 /* Sources */ = {
@@ -277,6 +352,7 @@
 		};
 		952499971E4827E9006353C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35AEEF072333330C17486D08 /* Pods-PhotoSNS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -291,6 +367,7 @@
 		};
 		952499981E4827E9006353C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172559E899AF6DE8BFDBD366 /* Pods-PhotoSNS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
