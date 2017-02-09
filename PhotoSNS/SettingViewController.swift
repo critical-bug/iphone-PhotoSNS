@@ -7,29 +7,52 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 class SettingViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	@IBOutlet weak var displayNameTextField: UITextField!
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+		let user = FIRAuth.auth()?.currentUser
+		if let user = user {
+			displayNameTextField.text = user.displayName
+		}
+	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 
-    /*
-    // MARK: - Navigation
+	@IBAction func handleChangeButton(_ sender: Any) {
+		if let displayName = displayNameTextField.text {
+			if displayName.isEmpty {
+				SVProgressHUD.showError(withStatus: "表示名を入力して下さい")
+				return
+			}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+			if let user = FIRAuth.auth()?.currentUser {
+				let changeRequest = user.profileChangeRequest()
+				changeRequest.displayName = displayName
+				changeRequest.commitChanges { error in
+					if let error = error {
+						print("DEBUG_PRINT: " + error.localizedDescription)
+					}
+					print("DEBUG_PRINT: [displayName = \(user.displayName)]の設定に成功しました。")
+
+					// HUDで完了を知らせる
+					SVProgressHUD.showSuccess(withStatus: "表示名を変更しました")
+				}
+			} else {
+				print("DEBUG_PRINT: displayNameの設定に失敗しました。")
+			}
+		}
+	}
+
+	@IBAction func handleLogoutButton(_ sender: Any) {
+	}
 
 }

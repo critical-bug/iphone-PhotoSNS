@@ -127,7 +127,6 @@
                     <connections>
                         <outlet property="displayNameTextField" destination="BtL-e8-Ecg" id="AS4-iz-SVN"/>
                         <outlet property="emailTextField" destination="FpQ-Sn-17e" id="HXc-8p-bEO"/>
-
                         <outlet property="passwordTextField" destination="JDp-0a-dbs" id="VDr-aI-AbU"/>
                     </connections>
                 </viewController>
@@ -180,8 +179,50 @@
                     <view key="view" contentMode="scaleToFill" id="CNR-Lc-hgu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmj-yb-4G8">
+                                <rect key="frame" x="10" y="100" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="m7y-4z-hf5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-yG-ZaK">
+                                <rect key="frame" x="10" y="140" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ARM-Q7-PXT"/>
+                                </constraints>
+                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleChangeButton:" destination="IbD-j9-5Oh" eventType="touchUpInside" id="zWc-rG-5ed"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-Cc-Xai">
+                                <rect key="frame" x="10" y="190" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ZAp-Rm-6dN"/>
+                                </constraints>
+                                <state key="normal" title="ログアウト" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLogoutButton:" destination="IbD-j9-5Oh" eventType="touchUpInside" id="0Tg-qu-tz2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pu5-yG-ZaK" firstAttribute="centerX" secondItem="CNR-Lc-hgu" secondAttribute="centerX" id="57P-vb-1Sn"/>
+                            <constraint firstItem="21G-Cc-Xai" firstAttribute="top" secondItem="pu5-yG-ZaK" secondAttribute="bottom" constant="10" id="ANQ-Hm-uyC"/>
+                            <constraint firstItem="21G-Cc-Xai" firstAttribute="centerX" secondItem="CNR-Lc-hgu" secondAttribute="centerX" id="H7H-qa-qJI"/>
+                            <constraint firstItem="bmj-yb-4G8" firstAttribute="centerX" secondItem="CNR-Lc-hgu" secondAttribute="centerX" id="YCb-jg-o6L"/>
+                            <constraint firstItem="pu5-yG-ZaK" firstAttribute="top" secondItem="bmj-yb-4G8" secondAttribute="bottom" constant="10" id="l5q-q9-33L"/>
+                            <constraint firstItem="bmj-yb-4G8" firstAttribute="top" secondItem="HBt-3h-2UI" secondAttribute="bottom" constant="80" id="zkO-dO-ecz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="bmj-yb-4G8" id="Lcl-vQ-rgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39e-wl-D6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
