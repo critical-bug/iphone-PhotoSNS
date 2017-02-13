@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import ESTabBarController
 
 class SettingViewController: UIViewController {
 
@@ -43,16 +44,24 @@ class SettingViewController: UIViewController {
 					}
 					print("DEBUG_PRINT: [displayName = \(user.displayName)]の設定に成功しました。")
 
-					// HUDで完了を知らせる
 					SVProgressHUD.showSuccess(withStatus: "表示名を変更しました")
 				}
 			} else {
 				print("DEBUG_PRINT: displayNameの設定に失敗しました。")
 			}
 		}
+		self.view.endEditing(true)
 	}
 
 	@IBAction func handleLogoutButton(_ sender: Any) {
+		try! FIRAuth.auth()?.signOut()
+
+		let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+		self.present(loginViewController!, animated: true, completion: nil)
+
+		// ログイン画面から戻ってきた時のためにホーム画面（index = 0）を選択している状態にしておく
+		let tabBarController = parent as! ESTabBarController
+		tabBarController.setSelectedIndex(0, animated: false)
 	}
 
 }

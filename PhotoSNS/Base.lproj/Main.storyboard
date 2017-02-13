@@ -91,7 +91,7 @@
                                     <constraint firstAttribute="height" constant="30" id="EIH-Dw-BRk"/>
                                     <constraint firstAttribute="width" constant="300" id="h9w-QQ-E3b"/>
                                 </constraints>
-                                <state key="normal" title="Login" backgroundImage="btn"/>
+                                <state key="normal" title="ログインする" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleLoginButton:" destination="QXB-a4-SaB" eventType="touchUpInside" id="Kd0-Wz-f6Z"/>
                                 </connections>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="height" constant="30" id="0Vn-mC-vlG"/>
                                     <constraint firstAttribute="width" constant="300" id="AWB-2h-gCk"/>
                                 </constraints>
-                                <state key="normal" title="Create new account" backgroundImage="btn"/>
+                                <state key="normal" title="アカウントを作成する" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleCreateAccountButton:" destination="QXB-a4-SaB" eventType="touchUpInside" id="UI2-3K-DCu"/>
                                 </connections>
@@ -145,7 +145,47 @@
                     <view key="view" contentMode="scaleToFill" id="dIW-bI-pH8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-Xh-r3h">
+                                <rect key="frame" x="10" y="80" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wGv-Js-gZ9"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリから選択する" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="JZu-UB-ug2" eventType="touchUpInside" id="mId-sy-O5m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeZ-nN-f1D">
+                                <rect key="frame" x="10" y="130" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ipC-OJ-MYh"/>
+                                </constraints>
+                                <state key="normal" title="写真を撮る" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="JZu-UB-ug2" eventType="touchUpInside" id="JUz-Bl-4P8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69E-zP-TIi">
+                                <rect key="frame" x="10" y="180" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="m0k-hd-2rv"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="JZu-UB-ug2" eventType="touchUpInside" id="TTV-9x-WXb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hq6-Xh-r3h" firstAttribute="top" secondItem="ked-Nh-OMr" secondAttribute="bottom" constant="60" id="4CJ-u3-fD3"/>
+                            <constraint firstItem="LeZ-nN-f1D" firstAttribute="top" secondItem="Hq6-Xh-r3h" secondAttribute="bottom" constant="10" id="Rr6-X1-fSm"/>
+                            <constraint firstItem="69E-zP-TIi" firstAttribute="centerX" secondItem="dIW-bI-pH8" secondAttribute="centerX" id="VAg-lb-9jE"/>
+                            <constraint firstItem="LeZ-nN-f1D" firstAttribute="centerX" secondItem="dIW-bI-pH8" secondAttribute="centerX" id="VNt-ty-NFi"/>
+                            <constraint firstItem="Hq6-Xh-r3h" firstAttribute="centerX" secondItem="dIW-bI-pH8" secondAttribute="centerX" id="lF1-x7-D7S"/>
+                            <constraint firstItem="69E-zP-TIi" firstAttribute="top" secondItem="LeZ-nN-f1D" secondAttribute="bottom" constant="10" id="yoV-2q-KkT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf8-zo-qac" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,22 +229,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-yG-ZaK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-yG-ZaK">
                                 <rect key="frame" x="10" y="140" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ARM-Q7-PXT"/>
                                 </constraints>
-                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
+                                <state key="normal" title="表示名を変更する" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleChangeButton:" destination="IbD-j9-5Oh" eventType="touchUpInside" id="zWc-rG-5ed"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-Cc-Xai">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21G-Cc-Xai">
                                 <rect key="frame" x="10" y="190" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ZAp-Rm-6dN"/>
                                 </constraints>
-                                <state key="normal" title="ログアウト" backgroundImage="btn"/>
+                                <state key="normal" title="ログアウトする" backgroundImage="btn"/>
                                 <connections>
                                     <action selector="handleLogoutButton:" destination="IbD-j9-5Oh" eventType="touchUpInside" id="0Tg-qu-tz2"/>
                                 </connections>
