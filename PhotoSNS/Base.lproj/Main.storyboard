@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -202,8 +203,58 @@
                     <view key="view" contentMode="scaleToFill" id="bfO-p9-Aib">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMR-kh-rBj">
+                                <rect key="frame" x="16" y="40" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="hKO-NO-qzr"/>
+                                    <constraint firstAttribute="width" constant="120" id="yqs-aZ-XC5"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キャプション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amq-VQ-2fY">
+                                <rect key="frame" x="146" y="130" width="158" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-Ht-o1a">
+                                <rect key="frame" x="10" y="180" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Fu7-wt-o44"/>
+                                </constraints>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="2eZ-sW-1VS" eventType="touchUpInside" id="s0D-V9-2Jw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-eX-DUB">
+                                <rect key="frame" x="10" y="230" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="tbA-EO-ryb"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="2eZ-sW-1VS" eventType="touchUpInside" id="fk9-lu-xsO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aMR-kh-rBj" firstAttribute="leading" secondItem="bfO-p9-Aib" secondAttribute="leadingMargin" id="0LM-Zb-OxQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amq-VQ-2fY" secondAttribute="trailing" id="4NH-3u-YcO"/>
+                            <constraint firstItem="Nu5-Ht-o1a" firstAttribute="centerX" secondItem="bfO-p9-Aib" secondAttribute="centerX" id="5S0-2b-3Dz"/>
+                            <constraint firstItem="aMR-kh-rBj" firstAttribute="top" secondItem="YOd-xM-ei2" secondAttribute="bottom" constant="20" id="M8R-DC-93v"/>
+                            <constraint firstItem="amq-VQ-2fY" firstAttribute="leading" secondItem="aMR-kh-rBj" secondAttribute="trailing" constant="10" id="N8P-jH-P4p"/>
+                            <constraint firstItem="amq-VQ-2fY" firstAttribute="bottom" secondItem="aMR-kh-rBj" secondAttribute="bottom" id="qcE-g0-kzl"/>
+                            <constraint firstItem="Nu5-Ht-o1a" firstAttribute="top" secondItem="amq-VQ-2fY" secondAttribute="bottom" constant="20" id="rgw-ym-GEz"/>
+                            <constraint firstItem="hAG-eX-DUB" firstAttribute="centerX" secondItem="bfO-p9-Aib" secondAttribute="centerX" id="uSI-10-DRA"/>
+                            <constraint firstItem="hAG-eX-DUB" firstAttribute="top" secondItem="Nu5-Ht-o1a" secondAttribute="bottom" constant="10" id="w7N-MT-zPW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="captionTextField" destination="amq-VQ-2fY" id="AuN-09-nEz"/>
+                        <outlet property="imageView" destination="aMR-kh-rBj" id="ou1-aJ-cfo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hf-nr-0MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
