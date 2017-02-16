@@ -38,8 +38,23 @@
                     <view key="view" contentMode="scaleToFill" id="FKg-xO-HRD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-jv-Geo">
+                                <rect key="frame" x="16" y="20" width="288" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qq4-jv-Geo" firstAttribute="top" secondItem="keJ-bc-LR5" secondAttribute="bottom" id="OUH-Wh-CRK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qq4-jv-Geo" secondAttribute="trailing" id="QmB-9N-0FS"/>
+                            <constraint firstItem="qq4-jv-Geo" firstAttribute="leading" secondItem="FKg-xO-HRD" secondAttribute="leadingMargin" id="bBW-wH-NIC"/>
+                            <constraint firstItem="FL2-1H-seB" firstAttribute="top" secondItem="qq4-jv-Geo" secondAttribute="bottom" constant="25" id="sgW-QU-Gtj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qq4-jv-Geo" id="OKu-xT-9aT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQF-QP-JxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
