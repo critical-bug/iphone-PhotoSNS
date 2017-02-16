@@ -104,6 +104,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 	// MARK: UITableViewDataSource
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		print("DEBUG PRINT: tableView(numberOfRowsInSection:\(section)):\(postArray.count)")
 		return postArray.count
 	}
 
